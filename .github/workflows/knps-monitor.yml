@@ -48,7 +48,7 @@ jobs:
         
     - name: 로그 업로드 (실패시)
       if: failure()
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: monitoring-logs
         path: "*.log"
