@@ -4,12 +4,12 @@
       {
         "date": "2025-09-05",
         "weekday": "금요일",
-        "remaining": 9
+        "remaining": 15
       },
       {
         "date": "2025-09-06",
         "weekday": "토요일",
-        "remaining": 9
+        "remaining": 15
       }
     ],
     "10월": []
@@ -44,12 +44,12 @@
       {
         "date": "2025-09-05",
         "weekday": "금요일",
-        "remaining": 4
+        "remaining": 7
       },
       {
         "date": "2025-09-06",
         "weekday": "토요일",
-        "remaining": 4
+        "remaining": 7
       },
       {
         "date": "2025-09-12",
@@ -60,22 +60,22 @@
     "10월": []
   },
   "설악산": {
+    "9월": [],
+    "10월": []
+  },
+  "한려해상": {
     "9월": [
       {
         "date": "2025-09-05",
         "weekday": "금요일",
-        "remaining": 16
+        "remaining": 1
       },
       {
         "date": "2025-09-06",
         "weekday": "토요일",
-        "remaining": 16
+        "remaining": 1
       }
     ],
-    "10월": []
-  },
-  "한려해상": {
-    "9월": [],
     "10월": []
   },
   "무등산": {
@@ -83,12 +83,12 @@
       {
         "date": "2025-09-05",
         "weekday": "금요일",
-        "remaining": 13
+        "remaining": 4
       },
       {
         "date": "2025-09-06",
         "weekday": "토요일",
-        "remaining": 13
+        "remaining": 4
       },
       {
         "date": "2025-09-12",
@@ -103,12 +103,12 @@
       {
         "date": "2025-09-05",
         "weekday": "금요일",
-        "remaining": 21
+        "remaining": 3
       },
       {
         "date": "2025-09-06",
         "weekday": "토요일",
-        "remaining": 21
+        "remaining": 3
       },
       {
         "date": "2025-09-12",
@@ -149,12 +149,12 @@
       {
         "date": "2025-09-05",
         "weekday": "금요일",
-        "remaining": 25
+        "remaining": 23
       },
       {
         "date": "2025-09-06",
         "weekday": "토요일",
-        "remaining": 25
+        "remaining": 23
       }
     ],
     "10월": []
