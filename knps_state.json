@@ -7,7 +7,13 @@
         "remaining": 5
       }
     ],
-    "10월": []
+    "10월": [
+      {
+        "date": "2025-10-24",
+        "weekday": "금요일",
+        "remaining": 1
+      }
+    ]
   },
   "지리산": {
     "9월": [
@@ -24,15 +30,26 @@
       {
         "date": "2025-09-12",
         "weekday": "금요일",
-        "remaining": 2
+        "remaining": 3
       },
       {
         "date": "2025-09-19",
         "weekday": "금요일",
-        "remaining": 3
+        "remaining": 4
       }
     ],
-    "10월": []
+    "10월": [
+      {
+        "date": "2025-10-10",
+        "weekday": "금요일",
+        "remaining": 1
+      },
+      {
+        "date": "2025-10-17",
+        "weekday": "금요일",
+        "remaining": 1
+      }
+    ]
   },
   "소백산": {
     "9월": [
@@ -65,11 +82,6 @@
       },
       {
         "date": "2025-10-24",
-        "weekday": "금요일",
-        "remaining": 1
-      },
-      {
-        "date": "2025-10-31",
         "weekday": "금요일",
         "remaining": 1
       }
@@ -131,7 +143,7 @@
       {
         "date": "2025-09-13",
         "weekday": "토요일",
-        "remaining": 1
+        "remaining": 2
       },
       {
         "date": "2025-09-27",
@@ -187,19 +199,9 @@
     ],
     "10월": [
       {
-        "date": "2025-10-04",
-        "weekday": "토요일",
-        "remaining": 1
-      },
-      {
         "date": "2025-10-10",
         "weekday": "금요일",
         "remaining": 3
-      },
-      {
-        "date": "2025-10-11",
-        "weekday": "토요일",
-        "remaining": 1
       },
       {
         "date": "2025-10-17",
@@ -229,11 +231,6 @@
         "date": "2025-09-06",
         "weekday": "토요일",
         "remaining": 22
-      },
-      {
-        "date": "2025-09-13",
-        "weekday": "토요일",
-        "remaining": 2
       },
       {
         "date": "2025-09-19",
@@ -266,12 +263,6 @@
         "remaining": 2
       }
     ],
-    "10월": [
-      {
-        "date": "2025-10-17",
-        "weekday": "금요일",
-        "remaining": 1
-      }
-    ]
+    "10월": []
   }
 }
