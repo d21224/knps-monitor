@@ -8,12 +8,12 @@
       {
         "date": "2025-09-05",
         "weekday": "금요일",
-        "remaining": 15
+        "remaining": 18
       },
       {
         "date": "2025-09-06",
         "weekday": "토요일",
-        "remaining": 15
+        "remaining": 18
       },
       {
         "date": "2025-09-12",
@@ -49,7 +49,18 @@
     "10월": []
   },
   "설악산": {
-    "9월": [],
+    "9월": [
+      {
+        "date": "2025-09-05",
+        "weekday": "금요일",
+        "remaining": 19
+      },
+      {
+        "date": "2025-09-06",
+        "weekday": "토요일",
+        "remaining": 19
+      }
+    ],
     "10월": []
   },
   "한려해상": {
@@ -61,12 +72,12 @@
       {
         "date": "2025-09-05",
         "weekday": "금요일",
-        "remaining": 3
+        "remaining": 10
       },
       {
         "date": "2025-09-06",
         "weekday": "토요일",
-        "remaining": 3
+        "remaining": 10
       },
       {
         "date": "2025-09-12",
@@ -86,12 +97,12 @@
       {
         "date": "2025-09-05",
         "weekday": "금요일",
-        "remaining": 3
+        "remaining": 2
       },
       {
         "date": "2025-09-06",
         "weekday": "토요일",
-        "remaining": 3
+        "remaining": 2
       },
       {
         "date": "2025-09-12",
@@ -132,12 +143,12 @@
       {
         "date": "2025-09-05",
         "weekday": "금요일",
-        "remaining": 14
+        "remaining": 22
       },
       {
         "date": "2025-09-06",
         "weekday": "토요일",
-        "remaining": 14
+        "remaining": 22
       }
     ],
     "10월": []
