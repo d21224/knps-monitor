@@ -2,6 +2,16 @@
   "북한산": {
     "9월": [
       {
+        "date": "2025-09-05",
+        "weekday": "금요일",
+        "remaining": 6
+      },
+      {
+        "date": "2025-09-06",
+        "weekday": "토요일",
+        "remaining": 6
+      },
+      {
         "date": "2025-09-12",
         "weekday": "금요일",
         "remaining": 1
@@ -14,12 +24,12 @@
       {
         "date": "2025-09-05",
         "weekday": "금요일",
-        "remaining": 18
+        "remaining": 16
       },
       {
         "date": "2025-09-06",
         "weekday": "토요일",
-        "remaining": 18
+        "remaining": 16
       },
       {
         "date": "2025-09-12",
@@ -29,7 +39,7 @@
       {
         "date": "2025-09-19",
         "weekday": "금요일",
-        "remaining": 4
+        "remaining": 3
       }
     ],
     "10월": []
@@ -39,12 +49,12 @@
       {
         "date": "2025-09-05",
         "weekday": "금요일",
-        "remaining": 8
+        "remaining": 14
       },
       {
         "date": "2025-09-06",
         "weekday": "토요일",
-        "remaining": 8
+        "remaining": 14
       },
       {
         "date": "2025-09-12",
@@ -65,12 +75,12 @@
       {
         "date": "2025-09-05",
         "weekday": "금요일",
-        "remaining": 18
+        "remaining": 2
       },
       {
         "date": "2025-09-06",
         "weekday": "토요일",
-        "remaining": 18
+        "remaining": 2
       }
     ],
     "10월": []
@@ -84,12 +94,12 @@
       {
         "date": "2025-09-05",
         "weekday": "금요일",
-        "remaining": 11
+        "remaining": 13
       },
       {
         "date": "2025-09-06",
         "weekday": "토요일",
-        "remaining": 11
+        "remaining": 13
       },
       {
         "date": "2025-09-12",
@@ -104,12 +114,12 @@
       {
         "date": "2025-09-05",
         "weekday": "금요일",
-        "remaining": 2
+        "remaining": 13
       },
       {
         "date": "2025-09-06",
         "weekday": "토요일",
-        "remaining": 2
+        "remaining": 13
       },
       {
         "date": "2025-09-12",
@@ -150,12 +160,12 @@
       {
         "date": "2025-09-05",
         "weekday": "금요일",
-        "remaining": 22
+        "remaining": 7
       },
       {
         "date": "2025-09-06",
         "weekday": "토요일",
-        "remaining": 22
+        "remaining": 7
       },
       {
         "date": "2025-09-12",
