@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-GitHub Actions용 국립공원 예약 모니터링 - 상태 변화시만 알림
+GitHub Actions용 국립공원 예약 모니터링 - 현재 예약 현황만 표시
 """
 
 import os
@@ -309,45 +309,45 @@ class GitHubActionsMonitor:
         
         return all_results
 
-def send_change_notification(self, changes, current_results):
-    """간단한 현재 예약 현황 알림"""
-    if not any(changes.values()):
-        return False
-        
-    message = f"""🏞️ 국립공원 예약 현황 업데이트
+    def send_change_notification(self, changes, current_results):
+        """간단한 현재 예약 현황 알림"""
+        if not any(changes.values()):
+            return False
+            
+        message = f"""🏞️ 국립공원 예약 현황 업데이트
 
 🕐 {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} (UTC)
 
 📋 현재 예약 가능:
 
 """
-    
-    # 현재 전체 예약 가능 상황만 표시
-    total_available = 0
-    for park_name, months_data in current_results.items():
-        park_has_availability = False
-        park_dates = []
         
-        for month_name, dates in months_data.items():
-            if dates:
-                park_has_availability = True
-                park_dates.extend(dates)
-                total_available += len(dates)
+        # 현재 전체 예약 가능 상황만 표시
+        total_available = 0
+        for park_name, months_data in current_results.items():
+            park_has_availability = False
+            park_dates = []
+            
+            for month_name, dates in months_data.items():
+                if dates:
+                    park_has_availability = True
+                    park_dates.extend(dates)
+                    total_available += len(dates)
+            
+            if park_has_availability:
+                message += f"🏔️ {park_name}\n"
+                for date_info in park_dates:
+                    message += f"  • {date_info['date']} ({date_info['weekday']}) - 잔여 {date_info['remaining']}개\n"
+                message += "\n"
         
-        if park_has_availability:
-            message += f"🏔️ {park_name}\n"
-            for date_info in park_dates:
-                message += f"  • {date_info['date']} ({date_info['weekday']}) - 잔여 {date_info['remaining']}개\n"
-            message += "\n"
-    
-    if total_available == 0:
-        message += "❌ 현재 예약 가능한 주말 없음\n\n"
-    else:
-        message += f"📊 총 {total_available}개 주말 날짜 예약 가능\n\n"
-    
-    message += f"🔗 {self.url}\n\n🤖 GitHub Actions 자동 모니터링"
-    
-    return self.send_telegram_message(message)
+        if total_available == 0:
+            message += "❌ 현재 예약 가능한 주말 없음\n\n"
+        else:
+            message += f"📊 총 {total_available}개 주말 날짜 예약 가능\n\n"
+        
+        message += f"🔗 {self.url}\n\n🤖 GitHub Actions 자동 모니터링"
+        
+        return self.send_telegram_message(message)
 
     def run_single_check(self):
         """한 번의 체크 실행"""
