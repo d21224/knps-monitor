@@ -309,7 +309,7 @@ class GitHubActionsMonitor:
         
         return all_results
 
-    def send_change_notification(self, changes, current_results):
+    def send_change_notification(self, changes):
         """변화 알림"""
         if not any(changes.values()):
             return False
