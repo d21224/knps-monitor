@@ -1,13 +1,7 @@
 {
   "북한산": {
     "9월": [],
-    "10월": [
-      {
-        "date": "2025-10-24",
-        "weekday": "금요일",
-        "remaining": 1
-      }
-    ]
+    "10월": []
   },
   "지리산": {
     "9월": [
@@ -29,7 +23,7 @@
       {
         "date": "2025-09-19",
         "weekday": "금요일",
-        "remaining": 2
+        "remaining": 3
       }
     ],
     "10월": []
@@ -55,11 +49,6 @@
         "date": "2025-09-19",
         "weekday": "금요일",
         "remaining": 2
-      },
-      {
-        "date": "2025-09-26",
-        "weekday": "금요일",
-        "remaining": 1
       }
     ],
     "10월": []
@@ -83,22 +72,17 @@
       {
         "date": "2025-09-05",
         "weekday": "금요일",
-        "remaining": 6
+        "remaining": 5
       },
       {
         "date": "2025-09-06",
         "weekday": "토요일",
-        "remaining": 6
+        "remaining": 5
       },
       {
         "date": "2025-09-12",
         "weekday": "금요일",
-        "remaining": 6
-      },
-      {
-        "date": "2025-09-13",
-        "weekday": "토요일",
-        "remaining": 1
+        "remaining": 5
       }
     ],
     "10월": []
@@ -123,12 +107,7 @@
       {
         "date": "2025-09-19",
         "weekday": "금요일",
-        "remaining": 5
-      },
-      {
-        "date": "2025-09-20",
-        "weekday": "토요일",
-        "remaining": 1
+        "remaining": 4
       },
       {
         "date": "2025-09-26",
@@ -140,7 +119,7 @@
       {
         "date": "2025-10-17",
         "weekday": "금요일",
-        "remaining": 5
+        "remaining": 4
       },
       {
         "date": "2025-10-24",
@@ -150,40 +129,13 @@
       {
         "date": "2025-10-31",
         "weekday": "금요일",
-        "remaining": 3
+        "remaining": 2
       }
     ]
   },
   "내장산": {
-    "9월": [
-      {
-        "date": "2025-09-13",
-        "weekday": "토요일",
-        "remaining": 23
-      },
-      {
-        "date": "2025-09-20",
-        "weekday": "토요일",
-        "remaining": 15
-      },
-      {
-        "date": "2025-09-27",
-        "weekday": "토요일",
-        "remaining": 21
-      }
-    ],
-    "10월": [
-      {
-        "date": "2025-10-10",
-        "weekday": "금요일",
-        "remaining": 16
-      },
-      {
-        "date": "2025-10-11",
-        "weekday": "토요일",
-        "remaining": 16
-      }
-    ]
+    "9월": [],
+    "10월": []
   },
   "변산반도": {
     "9월": [],
