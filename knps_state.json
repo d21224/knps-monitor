@@ -10,11 +10,6 @@
         "date": "2025-09-13",
         "weekday": "토요일",
         "remaining": 1
-      },
-      {
-        "date": "2025-09-26",
-        "weekday": "금요일",
-        "remaining": 1
       }
     ],
     "10월": []
@@ -54,7 +49,7 @@
       {
         "date": "2025-09-19",
         "weekday": "금요일",
-        "remaining": 3
+        "remaining": 2
       }
     ],
     "10월": []
@@ -64,12 +59,12 @@
       {
         "date": "2025-09-12",
         "weekday": "금요일",
-        "remaining": 16
+        "remaining": 15
       },
       {
         "date": "2025-09-13",
         "weekday": "토요일",
-        "remaining": 16
+        "remaining": 15
       },
       {
         "date": "2025-09-19",
@@ -80,18 +75,7 @@
     "10월": []
   },
   "한려해상": {
-    "9월": [
-      {
-        "date": "2025-09-12",
-        "weekday": "금요일",
-        "remaining": 1
-      },
-      {
-        "date": "2025-09-13",
-        "weekday": "토요일",
-        "remaining": 1
-      }
-    ],
+    "9월": [],
     "10월": []
   },
   "무등산": {
@@ -129,19 +113,19 @@
       {
         "date": "2025-09-19",
         "weekday": "금요일",
-        "remaining": 7
+        "remaining": 6
       },
       {
         "date": "2025-09-26",
         "weekday": "금요일",
-        "remaining": 12
+        "remaining": 11
       }
     ],
     "10월": [
       {
         "date": "2025-10-17",
         "weekday": "금요일",
-        "remaining": 3
+        "remaining": 2
       },
       {
         "date": "2025-10-24",
@@ -151,7 +135,7 @@
       {
         "date": "2025-10-31",
         "weekday": "금요일",
-        "remaining": 2
+        "remaining": 1
       }
     ]
   },
@@ -166,11 +150,6 @@
         "date": "2025-09-13",
         "weekday": "토요일",
         "remaining": 27
-      },
-      {
-        "date": "2025-09-19",
-        "weekday": "금요일",
-        "remaining": 2
       }
     ],
     "10월": []
