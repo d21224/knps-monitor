@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-GitHub Actions용 국립공원 예약 모니터링 - 디버깅 강화 버전
+GitHub Actions용 국립공원 예약 모니터링 - 수정된 버전
 """
 
 import os
@@ -48,244 +48,6 @@ class GitHubActionsMonitor:
             sys.exit(1)
         
         self.state_file = 'knps_state.json'
-        self.debug_mode = True  # 디버깅 모드 활성화
-
-    def save_debug_info(self, park_name, month, page_source, screenshot_path=None):
-        """디버깅 정보 저장"""
-        if not self.debug_mode:
-            return
-            
-        debug_dir = 'debug_logs'
-        os.makedirs(debug_dir, exist_ok=True)
-        
-        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-        
-        # HTML 소스 저장
-        html_file = f"{debug_dir}/{park_name}_{month}월_{timestamp}.html"
-        with open(html_file, 'w', encoding='utf-8') as f:
-            f.write(page_source)
-        
-        # 파싱된 텍스트 저장
-        text_file = f"{debug_dir}/{park_name}_{month}월_{timestamp}_text.txt"
-        with open(text_file, 'w', encoding='utf-8') as f:
-            f.write(page_source)
-        
-        logging.info(f"디버그 파일 저장: {html_file}")
-
-    def wait_for_page_load(self, driver, timeout=30):
-        """페이지 완전 로딩 대기"""
-        try:
-            # 기본 페이지 로딩 대기
-            WebDriverWait(driver, timeout).until(
-                lambda d: d.execute_script("return document.readyState") == "complete"
-            )
-            
-            # 추가 JavaScript 실행 완료 대기
-            time.sleep(5)
-            
-            # 달력 요소가 로딩될 때까지 대기
-            WebDriverWait(driver, timeout).until(
-                EC.presence_of_element_located((By.CLASS_NAME, "calendar"))
-            )
-            
-            # 날짜 요소들이 로딩될 때까지 대기
-            WebDriverWait(driver, timeout).until(
-                EC.presence_of_element_located((By.XPATH, "//td[contains(@class, 'calendar')]"))
-            )
-            
-            logging.info("페이지 로딩 완료 확인")
-            return True
-            
-        except Exception as e:
-            logging.warning(f"페이지 로딩 대기 중 오류: {e}")
-            return False
-
-    def extract_visible_calendar_data(self, driver):
-        """실제 화면에 표시되는 달력 데이터만 추출"""
-        try:
-            calendar_data = []
-            
-            # 달력 셀들 찾기 (여러 가능한 선택자 시도)
-            possible_selectors = [
-                "//td[contains(@class, 'calendar') and not(contains(@style, 'display: none'))]",
-                "//td[@class='calendar']",
-                "//div[contains(@class, 'day') and not(contains(@style, 'display: none'))]",
-                "//span[contains(@class, 'date')]"
-            ]
-            
-            calendar_cells = []
-            for selector in possible_selectors:
-                try:
-                    cells = driver.find_elements(By.XPATH, selector)
-                    if cells:
-                        calendar_cells = cells
-                        logging.info(f"달력 셀 발견: {len(cells)}개 (선택자: {selector})")
-                        break
-                except:
-                    continue
-            
-            if not calendar_cells:
-                logging.warning("달력 셀을 찾을 수 없음")
-                return []
-            
-            for cell in calendar_cells:
-                try:
-                    # 셀이 실제로 보이는지 확인
-                    if not cell.is_displayed():
-                        continue
-                    
-                    cell_text = cell.text.strip()
-                    if not cell_text:
-                        continue
-                    
-                    # 날짜 추출
-                    date_match = re.search(r'\b(\d{1,2})\b', cell_text)
-                    if not date_match:
-                        continue
-                    
-                    day = int(date_match.group(1))
-                    
-                    # 잔여 개수 추출
-                    remaining_match = re.search(r'생활관\s*:\s*잔여\s*(\d+)\s*개', cell_text)
-                    if remaining_match:
-                        remaining = int(remaining_match.group(1))
-                        
-                        calendar_data.append({
-                            'day': day,
-                            'remaining': remaining,
-                            'cell_text': cell_text,
-                            'is_clickable': cell.is_enabled()
-                        })
-                        
-                        logging.info(f"발견된 예약 가능 날짜: {day}일, 잔여 {remaining}개")
-                
-                except Exception as e:
-                    logging.debug(f"셀 파싱 오류: {e}")
-                    continue
-            
-            return calendar_data
-            
-        except Exception as e:
-            logging.error(f"달력 데이터 추출 실패: {e}")
-            return []
-
-    def parse_weekend_availability_enhanced(self, driver, month):
-        """향상된 주말 예약 파싱 (실제 화면 데이터 기반)"""
-        available_dates = []
-        
-        try:
-            # 페이지 완전 로딩 대기
-            self.wait_for_page_load(driver)
-            
-            # 스크린샷 저장 (디버깅용)
-            if self.debug_mode:
-                screenshot_path = f"debug_logs/screenshot_{month}월_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png"
-                driver.save_screenshot(screenshot_path)
-                logging.info(f"스크린샷 저장: {screenshot_path}")
-            
-            # 페이지 소스 저장 (디버깅용)
-            page_source = driver.page_source
-            self.save_debug_info("current", month, page_source)
-            
-            # 실제 화면에 보이는 달력 데이터 추출
-            calendar_data = self.extract_visible_calendar_data(driver)
-            
-            # 주말 날짜만 필터링
-            for data in calendar_data:
-                day = data['day']
-                remaining = data['remaining']
-                
-                if remaining <= 0:
-                    continue
-                
-                try:
-                    date_obj = datetime(self.target_year, month, day)
-                    weekday_num = date_obj.weekday()
-                    
-                    # 주말 (금요일=4, 토요일=5)만 포함
-                    if weekday_num in self.weekend_days:
-                        weekday_name = "금요일" if weekday_num == 4 else "토요일"
-                        
-                        date_info = {
-                            'date': f"{self.target_year}-{month:02d}-{day:02d}",
-                            'weekday': weekday_name,
-                            'remaining': remaining
-                        }
-                        
-                        available_dates.append(date_info)
-                        logging.info(f"✅ 유효한 주말 예약: {date_info}")
-                    else:
-                        logging.debug(f"⏭️ 주말 아님: {day}일 ({weekday_num})")
-                        
-                except ValueError as e:
-                    logging.warning(f"⚠️ 잘못된 날짜: {day}일 - {e}")
-                    continue
-            
-            # 기존 방식과 비교 (디버깅)
-            if self.debug_mode:
-                body_text = driver.find_element(By.TAG_NAME, "body").text
-                old_results = self.parse_weekend_availability_old(body_text, month)
-                
-                logging.info(f"🔍 새 방식 결과: {len(available_dates)}개")
-                logging.info(f"🔍 기존 방식 결과: {len(old_results)}개")
-                
-                # 차이점 로깅
-                new_dates = {d['date'] for d in available_dates}
-                old_dates = {d['date'] for d in old_results}
-                
-                if new_dates != old_dates:
-                    logging.warning(f"⚠️ 방식별 결과 차이 발견!")
-                    logging.warning(f"새 방식만: {new_dates - old_dates}")
-                    logging.warning(f"기존 방식만: {old_dates - new_dates}")
-            
-            return available_dates
-            
-        except Exception as e:
-            logging.error(f"향상된 파싱 실패: {e}")
-            # 기존 방식으로 폴백
-            try:
-                body_text = driver.find_element(By.TAG_NAME, "body").text
-                return self.parse_weekend_availability_old(body_text, month)
-            except:
-                return []
-
-    def parse_weekend_availability_old(self, page_text, month):
-        """기존 파싱 방식 (비교용)"""
-        available_dates = []
-        
-        try:
-            lines = page_text.split('\n')
-            
-            for i, line in enumerate(lines):
-                if re.match(r'^\d{1,2}$', line.strip()):
-                    day = int(line.strip())
-                    
-                    remaining = None
-                    for j in range(i+1, min(len(lines), i+10)):
-                        remaining_match = re.search(r'생활관\s*:\s*잔여\s*(\d+)\s*개', lines[j])
-                        if remaining_match:
-                            remaining = int(remaining_match.group(1))
-                            break
-                    
-                    if remaining is not None:
-                        try:
-                            date_obj = datetime(self.target_year, month, day)
-                            weekday_num = date_obj.weekday()
-                            
-                            if weekday_num in self.weekend_days and remaining > 0:
-                                weekday_name = "금요일" if weekday_num == 4 else "토요일"
-                                available_dates.append({
-                                    'date': f"{self.target_year}-{month:02d}-{day:02d}",
-                                    'weekday': weekday_name,
-                                    'remaining': remaining
-                                })
-                        except ValueError:
-                            continue
-            
-            return available_dates
-        except Exception as e:
-            logging.error(f"기존 파싱 실패: {e}")
-            return []
 
     def load_previous_state(self):
         """이전 상태 로드"""
@@ -398,8 +160,6 @@ class GitHubActionsMonitor:
         chrome_options.add_argument('--disable-dev-shm-usage')
         chrome_options.add_argument('--disable-gpu')
         chrome_options.add_argument('--window-size=1920,1080')
-        chrome_options.add_argument('--disable-web-security')
-        chrome_options.add_argument('--disable-features=VizDisplayCompositor')
         
         try:
             driver = webdriver.Chrome(options=chrome_options)
@@ -461,6 +221,77 @@ class GitHubActionsMonitor:
             logging.error(f"월 이동 실패: {e}")
             return False
 
+    def parse_weekend_availability(self, driver, month):
+        """주말 예약 파싱 - 수정된 버전"""
+        available_dates = []
+        
+        try:
+            # 페이지 로딩 완료 대기
+            time.sleep(3)
+            
+            # 달력 셀들 찾기 - data 속성을 가진 요소들만
+            calendar_cells = driver.find_elements(By.CSS_SELECTOR, ".calendar-cell[data-deptid][data-usedt]")
+            
+            for cell in calendar_cells:
+                try:
+                    # 예약 가능 조건 확인 (웹페이지와 동일한 로직)
+                    prd_sal_stcd = cell.get_attribute("data-prdsalstcd")  # 판매 상태
+                    cal_yn = cell.get_attribute("data-calyn")  # 달력 활성화 여부
+                    
+                    # 예약 불가능한 경우 스킵 (JavaScript 조건과 동일)
+                    if (prd_sal_stcd != 'N' and prd_sal_stcd != 'R') or cal_yn != 'Y':
+                        continue
+                    
+                    # 날짜 추출
+                    day_element = cell.find_element(By.CSS_SELECTOR, ".day")
+                    day = int(day_element.text.strip())
+                    
+                    # 잔여 개수 추출
+                    try:
+                        contents_ul = cell.find_element(By.CSS_SELECTOR, "ul.contents")
+                        remaining_text = contents_ul.text
+                        remaining_match = re.search(r'생활관\s*:\s*잔여\s*(\d+)\s*개', remaining_text)
+                        
+                        if remaining_match:
+                            remaining = int(remaining_match.group(1))
+                            
+                            # 잔여가 0개면 스킵
+                            if remaining <= 0:
+                                continue
+                            
+                            # 주말 확인
+                            try:
+                                date_obj = datetime(self.target_year, month, day)
+                                weekday_num = date_obj.weekday()
+                                
+                                if weekday_num in self.weekend_days:
+                                    weekday_name = "금요일" if weekday_num == 4 else "토요일"
+                                    available_dates.append({
+                                        'date': f"{self.target_year}-{month:02d}-{day:02d}",
+                                        'weekday': weekday_name,
+                                        'remaining': remaining
+                                    })
+                                    
+                                    logging.info(f"유효한 예약 발견: {month}월 {day}일 ({weekday_name}) - 잔여 {remaining}개")
+                                    
+                            except ValueError:
+                                continue
+                                
+                    except:
+                        # contents가 없는 경우 (잔여 정보 없음)
+                        continue
+                        
+                except Exception as e:
+                    logging.debug(f"셀 파싱 중 오류: {e}")
+                    continue
+            
+            logging.info(f"{month}월 파싱 완료: {len(available_dates)}개 예약 가능")
+            return available_dates
+            
+        except Exception as e:
+            logging.error(f"파싱 실패: {e}")
+            return []
+
     def check_park_availability(self, park_name):
         """공원 체크"""
         driver = self.setup_driver()
@@ -468,7 +299,6 @@ class GitHubActionsMonitor:
             return {}
             
         try:
-            logging.info(f"🌲 {park_name} 페이지 접속 중...")
             driver.get(self.url)
             time.sleep(10)
             
@@ -481,23 +311,17 @@ class GitHubActionsMonitor:
             result = {}
             
             for month in self.target_months:
-                logging.info(f"📅 {park_name} {month}월 데이터 수집 중...")
-                
                 if not self.navigate_to_month(driver, month):
-                    logging.warning(f"❌ {month}월로 이동 실패")
                     continue
-                
-                # 향상된 파싱 사용
-                available_dates = self.parse_weekend_availability_enhanced(driver, month)
+                    
+                available_dates = self.parse_weekend_availability(driver, month)
                 
                 month_name = f"{month}월"
                 result[month_name] = available_dates
-                
-                logging.info(f"✅ {park_name} {month}월: {len(available_dates)}개 예약 가능")
             
             return result
         except Exception as e:
-            logging.error(f"❌ {park_name} 체크 실패: {e}")
+            logging.error(f"{park_name} 체크 실패: {e}")
             return {}
         finally:
             if driver:
@@ -508,7 +332,7 @@ class GitHubActionsMonitor:
         all_results = {}
         
         for park_name in self.parks.keys():
-            logging.info(f"🏔️ {park_name} 체크 중...")
+            logging.info(f"{park_name} 체크 중...")
             park_result = self.check_park_availability(park_name)
             
             if park_result:
@@ -559,7 +383,7 @@ class GitHubActionsMonitor:
 
     def run_single_check(self):
         """한 번의 체크 실행"""
-        logging.info("🚀 GitHub Actions 모니터링 시작")
+        logging.info("GitHub Actions 모니터링 시작")
         
         try:
             previous_state = self.load_previous_state()
@@ -567,17 +391,17 @@ class GitHubActionsMonitor:
             changes = self.compare_states(previous_state, current_results)
             
             if any(changes.values()):
-                logging.info("📢 상태 변화 감지 - 알림 발송")
+                logging.info("상태 변화 감지 - 알림 발송")
                 success = self.send_change_notification(changes, current_results)
             else:
-                logging.info("🔄 상태 변화 없음")
+                logging.info("상태 변화 없음")
                 success = True
             
             self.save_current_state(current_results)
             return success
             
         except Exception as e:
-            logging.error(f"💥 체크 중 오류: {e}")
+            logging.error(f"체크 중 오류: {e}")
             error_message = f"❌ GitHub Actions 모니터링 오류\n\n{str(e)}\n\n{datetime.now().strftime('%Y-%m-%d %H:%M:%S')} (UTC)"
             self.send_telegram_message(error_message)
             return False
@@ -587,10 +411,10 @@ def main():
     success = monitor.run_single_check()
     
     if success:
-        logging.info("✅ 모니터링 완료")
+        logging.info("모니터링 완료")
         sys.exit(0)
     else:
-        logging.error("❌ 모니터링 실패")
+        logging.error("모니터링 실패")
         sys.exit(1)
 
 if __name__ == "__main__":
