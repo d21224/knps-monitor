@@ -16,7 +16,12 @@
       {
         "date": "2025-09-19",
         "weekday": "금요일",
-        "remaining": 5
+        "remaining": 7
+      },
+      {
+        "date": "2025-09-20",
+        "weekday": "토요일",
+        "remaining": 2
       }
     ],
     "10월": []
