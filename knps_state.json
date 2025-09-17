@@ -46,11 +46,6 @@
         "date": "2025-09-19",
         "weekday": "금요일",
         "remaining": 6
-      },
-      {
-        "date": "2025-09-20",
-        "weekday": "토요일",
-        "remaining": 1
       }
     ],
     "10월": []
@@ -61,11 +56,6 @@
         "date": "2025-09-19",
         "weekday": "금요일",
         "remaining": 8
-      },
-      {
-        "date": "2025-09-20",
-        "weekday": "토요일",
-        "remaining": 1
       }
     ],
     "10월": []
