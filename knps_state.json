@@ -32,6 +32,11 @@
         "date": "2025-10-17",
         "weekday": "금요일",
         "remaining": 9
+      },
+      {
+        "date": "2025-10-31",
+        "weekday": "금요일",
+        "remaining": 1
       }
     ]
   }
