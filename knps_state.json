@@ -13,7 +13,7 @@
       {
         "date": "2025-10-24",
         "weekday": "금요일",
-        "remaining": 14
+        "remaining": 12
       }
     ]
   },
@@ -31,12 +31,7 @@
       {
         "date": "2025-10-24",
         "weekday": "금요일",
-        "remaining": 6
-      },
-      {
-        "date": "2025-10-25",
-        "weekday": "토요일",
-        "remaining": 1
+        "remaining": 5
       },
       {
         "date": "2025-10-31",
