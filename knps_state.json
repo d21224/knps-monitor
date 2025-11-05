@@ -55,7 +55,7 @@
       {
         "date": "2025-10-17",
         "weekday": "금요일",
-        "remaining": 9
+        "remaining": 8
       },
       {
         "date": "2025-10-18",
@@ -86,7 +86,7 @@
       {
         "date": "2025-10-10",
         "weekday": "금요일",
-        "remaining": 20
+        "remaining": 19
       },
       {
         "date": "2025-10-11",
@@ -137,12 +137,12 @@
       {
         "date": "2025-10-10",
         "weekday": "금요일",
-        "remaining": 21
+        "remaining": 20
       },
       {
         "date": "2025-10-11",
         "weekday": "토요일",
-        "remaining": 19
+        "remaining": 18
       },
       {
         "date": "2025-10-17",
@@ -223,7 +223,7 @@
       {
         "date": "2025-10-24",
         "weekday": "금요일",
-        "remaining": 10
+        "remaining": 9
       }
     ]
   },
