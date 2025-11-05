@@ -2,11 +2,6 @@
   "북한산": {
     "9월": [
       {
-        "date": "2025-09-12",
-        "weekday": "금요일",
-        "remaining": 1
-      },
-      {
         "date": "2025-09-19",
         "weekday": "금요일",
         "remaining": 6
@@ -35,7 +30,7 @@
       {
         "date": "2025-10-04",
         "weekday": "토요일",
-        "remaining": 5
+        "remaining": 1
       },
       {
         "date": "2025-10-10",
@@ -50,12 +45,12 @@
       {
         "date": "2025-10-17",
         "weekday": "금요일",
-        "remaining": 8
+        "remaining": 7
       },
       {
         "date": "2025-10-18",
         "weekday": "토요일",
-        "remaining": 9
+        "remaining": 8
       }
     ]
   },
@@ -161,12 +156,12 @@
       {
         "date": "2025-09-12",
         "weekday": "금요일",
-        "remaining": 7
+        "remaining": 6
       },
       {
         "date": "2025-09-13",
         "weekday": "토요일",
-        "remaining": 4
+        "remaining": 3
       },
       {
         "date": "2025-09-19",
@@ -232,7 +227,7 @@
       {
         "date": "2025-09-13",
         "weekday": "토요일",
-        "remaining": 21
+        "remaining": 20
       },
       {
         "date": "2025-09-19",
