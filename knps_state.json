@@ -22,11 +22,6 @@
   "변산반도": {
     "9월": [
       {
-        "date": "2025-09-12",
-        "weekday": "금요일",
-        "remaining": 1
-      },
-      {
         "date": "2025-09-26",
         "weekday": "금요일",
         "remaining": 1
@@ -92,12 +87,12 @@
       {
         "date": "2025-10-10",
         "weekday": "금요일",
-        "remaining": 19
+        "remaining": 20
       },
       {
         "date": "2025-10-11",
         "weekday": "토요일",
-        "remaining": 17
+        "remaining": 18
       },
       {
         "date": "2025-10-17",
