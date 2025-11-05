@@ -14,7 +14,7 @@
       {
         "date": "2025-09-19",
         "weekday": "금요일",
-        "remaining": 6
+        "remaining": 5
       },
       {
         "date": "2025-09-26",
@@ -24,7 +24,7 @@
       {
         "date": "2025-09-27",
         "weekday": "토요일",
-        "remaining": 14
+        "remaining": 13
       }
     ],
     "10월": []
@@ -104,7 +104,7 @@
       {
         "date": "2025-09-12",
         "weekday": "금요일",
-        "remaining": 8
+        "remaining": 7
       },
       {
         "date": "2025-09-13",
