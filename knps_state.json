@@ -22,13 +22,7 @@
         "remaining": 13
       }
     ],
-    "10월": [
-      {
-        "date": "2025-10-25",
-        "weekday": "토요일",
-        "remaining": 1
-      }
-    ]
+    "10월": []
   },
   "변산반도": {
     "9월": [
@@ -52,12 +46,12 @@
       {
         "date": "2025-10-04",
         "weekday": "토요일",
-        "remaining": 3
+        "remaining": 2
       },
       {
         "date": "2025-10-10",
         "weekday": "금요일",
-        "remaining": 13
+        "remaining": 11
       },
       {
         "date": "2025-10-11",
@@ -179,7 +173,7 @@
       {
         "date": "2025-10-31",
         "weekday": "금요일",
-        "remaining": 2
+        "remaining": 1
       }
     ]
   },
