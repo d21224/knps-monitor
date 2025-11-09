@@ -24,15 +24,10 @@
       {
         "date": "2025-09-27",
         "weekday": "토요일",
-        "remaining": 12
+        "remaining": 11
       }
     ],
     "10월": [
-      {
-        "date": "2025-10-24",
-        "weekday": "금요일",
-        "remaining": 1
-      },
       {
         "date": "2025-10-25",
         "weekday": "토요일",
@@ -45,12 +40,12 @@
       {
         "date": "2025-09-13",
         "weekday": "토요일",
-        "remaining": 4
+        "remaining": 3
       },
       {
         "date": "2025-09-27",
         "weekday": "토요일",
-        "remaining": 2
+        "remaining": 1
       }
     ],
     "10월": [
@@ -208,7 +203,7 @@
       {
         "date": "2025-09-13",
         "weekday": "토요일",
-        "remaining": 5
+        "remaining": 6
       },
       {
         "date": "2025-09-19",
