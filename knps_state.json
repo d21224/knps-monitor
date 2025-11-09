@@ -84,6 +84,11 @@
   "한려해상": {
     "9월": [
       {
+        "date": "2025-09-12",
+        "weekday": "금요일",
+        "remaining": 1
+      },
+      {
         "date": "2025-09-13",
         "weekday": "토요일",
         "remaining": 1
@@ -255,7 +260,7 @@
       {
         "date": "2025-10-24",
         "weekday": "금요일",
-        "remaining": 4
+        "remaining": 5
       }
     ]
   },
