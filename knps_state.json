@@ -27,13 +27,7 @@
         "remaining": 12
       }
     ],
-    "10월": [
-      {
-        "date": "2025-10-24",
-        "weekday": "금요일",
-        "remaining": 1
-      }
-    ]
+    "10월": []
   },
   "변산반도": {
     "9월": [
@@ -45,11 +39,6 @@
       {
         "date": "2025-09-13",
         "weekday": "토요일",
-        "remaining": 1
-      },
-      {
-        "date": "2025-09-26",
-        "weekday": "금요일",
         "remaining": 2
       }
     ],
@@ -129,16 +118,6 @@
         "date": "2025-10-18",
         "weekday": "토요일",
         "remaining": 16
-      },
-      {
-        "date": "2025-10-24",
-        "weekday": "금요일",
-        "remaining": 1
-      },
-      {
-        "date": "2025-10-25",
-        "weekday": "토요일",
-        "remaining": 1
       }
     ]
   },
@@ -260,7 +239,7 @@
       {
         "date": "2025-10-24",
         "weekday": "금요일",
-        "remaining": 4
+        "remaining": 5
       }
     ]
   },
@@ -327,11 +306,6 @@
         "date": "2025-10-24",
         "weekday": "금요일",
         "remaining": 3
-      },
-      {
-        "date": "2025-10-25",
-        "weekday": "토요일",
-        "remaining": 1
       },
       {
         "date": "2025-10-31",
