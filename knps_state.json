@@ -30,12 +30,17 @@
       {
         "date": "2025-09-20",
         "weekday": "토요일",
-        "remaining": 10
+        "remaining": 11
       },
       {
         "date": "2025-09-26",
         "weekday": "금요일",
-        "remaining": 3
+        "remaining": 2
+      },
+      {
+        "date": "2025-09-27",
+        "weekday": "토요일",
+        "remaining": 1
       }
     ],
     "10월": [
@@ -47,12 +52,17 @@
       {
         "date": "2025-10-10",
         "weekday": "금요일",
-        "remaining": 9
+        "remaining": 12
+      },
+      {
+        "date": "2025-10-11",
+        "weekday": "토요일",
+        "remaining": 1
       },
       {
         "date": "2025-10-17",
         "weekday": "금요일",
-        "remaining": 4
+        "remaining": 5
       },
       {
         "date": "2025-10-18",
@@ -66,7 +76,7 @@
       {
         "date": "2025-09-20",
         "weekday": "토요일",
-        "remaining": 2
+        "remaining": 3
       },
       {
         "date": "2025-09-27",
@@ -104,6 +114,11 @@
         "date": "2025-10-18",
         "weekday": "토요일",
         "remaining": 14
+      },
+      {
+        "date": "2025-10-24",
+        "weekday": "금요일",
+        "remaining": 1
       }
     ]
   },
@@ -150,6 +165,11 @@
         "date": "2025-10-24",
         "weekday": "금요일",
         "remaining": 8
+      },
+      {
+        "date": "2025-10-31",
+        "weekday": "금요일",
+        "remaining": 1
       }
     ]
   },
@@ -246,7 +266,7 @@
       {
         "date": "2025-10-24",
         "weekday": "금요일",
-        "remaining": 2
+        "remaining": 3
       }
     ]
   }
