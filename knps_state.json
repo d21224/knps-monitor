@@ -50,6 +50,11 @@
         "remaining": 10
       },
       {
+        "date": "2025-10-11",
+        "weekday": "토요일",
+        "remaining": 1
+      },
+      {
         "date": "2025-10-17",
         "weekday": "금요일",
         "remaining": 5
@@ -57,7 +62,7 @@
       {
         "date": "2025-10-18",
         "weekday": "토요일",
-        "remaining": 7
+        "remaining": 8
       }
     ]
   },
@@ -144,7 +149,7 @@
       {
         "date": "2025-10-24",
         "weekday": "금요일",
-        "remaining": 8
+        "remaining": 10
       }
     ]
   },
@@ -190,7 +195,7 @@
       {
         "date": "2025-10-24",
         "weekday": "금요일",
-        "remaining": 4
+        "remaining": 6
       }
     ]
   },
@@ -231,7 +236,7 @@
       {
         "date": "2025-10-24",
         "weekday": "금요일",
-        "remaining": 3
+        "remaining": 4
       }
     ]
   }
