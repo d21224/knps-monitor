@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-GitHub Actions용 국립공원 예약 모니터링 - 수정된 버전
+GitHub Actions용 국립공원 예약 모니터링 - 당월/익월 자동 체크
 """
 
 import os
@@ -28,9 +28,19 @@ logging.basicConfig(
 class GitHubActionsMonitor:
     def __init__(self):
         self.url = "https://reservation.knps.or.kr/eco/searchEcoMonthReservation.do"
-        self.target_year = 2025
-        self.target_months = [9, 10]
-        self.weekend_days = [4, 5]
+        
+        # 현재 날짜 기준으로 당월과 익월 설정
+        now = datetime.now()
+        self.target_year = now.year
+        self.target_months = [now.month, (now.month % 12) + 1]
+        
+        # 익월이 1월인 경우 연도 조정
+        if self.target_months[1] == 1:
+            self.next_year = self.target_year + 1
+        else:
+            self.next_year = self.target_year
+        
+        self.weekend_days = [4, 5]  # 금요일, 토요일
         
         # 모니터링할 공원 설정
         self.parks = {
@@ -51,6 +61,8 @@ class GitHubActionsMonitor:
             sys.exit(1)
         
         self.state_file = 'knps_state.json'
+        
+        logging.info(f"모니터링 대상: {self.target_year}년 {self.target_months[0]}월, {self.next_year}년 {self.target_months[1]}월")
 
     def load_previous_state(self):
         """이전 상태 로드"""
@@ -191,16 +203,19 @@ class GitHubActionsMonitor:
         """월 이동"""
         try:
             month_elements = driver.find_elements(By.XPATH, "//*[contains(text(), '월')]")
-            current_month = 9
+            current_month = None
             
+            # 현재 표시된 월 찾기
             for elem in month_elements:
                 text = elem.text
-                if "09월" in text:
-                    current_month = 9
+                match = re.search(r'(\d+)월', text)
+                if match:
+                    current_month = int(match.group(1))
                     break
-                elif "10월" in text:
-                    current_month = 10
-                    break
+            
+            if current_month is None:
+                logging.error("현재 월을 찾을 수 없습니다")
+                return False
             
             clicks_needed = target_month - current_month
             
@@ -224,8 +239,8 @@ class GitHubActionsMonitor:
             logging.error(f"월 이동 실패: {e}")
             return False
 
-    def parse_weekend_availability(self, driver, month):
-        """주말 예약 파싱 - 수정된 버전"""
+    def parse_weekend_availability(self, driver, month, year):
+        """주말 예약 파싱"""
         available_dates = []
         
         try:
@@ -264,13 +279,13 @@ class GitHubActionsMonitor:
                             
                             # 주말 확인
                             try:
-                                date_obj = datetime(self.target_year, month, day)
+                                date_obj = datetime(year, month, day)
                                 weekday_num = date_obj.weekday()
                                 
                                 if weekday_num in self.weekend_days:
                                     weekday_name = "금요일" if weekday_num == 4 else "토요일"
                                     available_dates.append({
-                                        'date': f"{self.target_year}-{month:02d}-{day:02d}",
+                                        'date': f"{year}-{month:02d}-{day:02d}",
                                         'weekday': weekday_name,
                                         'remaining': remaining
                                     })
@@ -313,13 +328,20 @@ class GitHubActionsMonitor:
             
             result = {}
             
-            for month in self.target_months:
-                if not self.navigate_to_month(driver, month):
-                    continue
-                    
-                available_dates = self.parse_weekend_availability(driver, month)
-                
-                month_name = f"{month}월"
+            # 당월 체크
+            if not self.navigate_to_month(driver, self.target_months[0]):
+                logging.warning(f"{self.target_months[0]}월로 이동 실패")
+            else:
+                available_dates = self.parse_weekend_availability(driver, self.target_months[0], self.target_year)
+                month_name = f"{self.target_months[0]}월"
+                result[month_name] = available_dates
+            
+            # 익월 체크
+            if not self.navigate_to_month(driver, self.target_months[1]):
+                logging.warning(f"{self.target_months[1]}월로 이동 실패")
+            else:
+                available_dates = self.parse_weekend_availability(driver, self.target_months[1], self.next_year)
+                month_name = f"{self.target_months[1]}월"
                 result[month_name] = available_dates
             
             return result
