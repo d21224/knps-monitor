@@ -19,6 +19,11 @@
         "date": "2025-12-19",
         "weekday": "금요일",
         "remaining": 1
+      },
+      {
+        "date": "2025-12-20",
+        "weekday": "토요일",
+        "remaining": 1
       }
     ],
     "1월": []
