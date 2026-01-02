@@ -11,17 +11,12 @@
       {
         "date": "2026-02-06",
         "weekday": "금요일",
-        "remaining": 6
+        "remaining": 5
       },
       {
         "date": "2026-02-13",
         "weekday": "금요일",
         "remaining": 10
-      },
-      {
-        "date": "2026-02-14",
-        "weekday": "토요일",
-        "remaining": 1
       },
       {
         "date": "2026-02-20",
