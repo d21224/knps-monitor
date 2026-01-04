@@ -2,11 +2,6 @@
   "북한산": {
     "1월": [
       {
-        "date": "2026-01-09",
-        "weekday": "금요일",
-        "remaining": 1
-      },
-      {
         "date": "2026-01-16",
         "weekday": "금요일",
         "remaining": 2
@@ -24,11 +19,6 @@
         "remaining": 12
       },
       {
-        "date": "2026-02-14",
-        "weekday": "토요일",
-        "remaining": 1
-      },
-      {
         "date": "2026-02-20",
         "weekday": "금요일",
         "remaining": 14
@@ -36,7 +26,7 @@
       {
         "date": "2026-02-27",
         "weekday": "금요일",
-        "remaining": 5
+        "remaining": 4
       }
     ]
   },
@@ -45,23 +35,12 @@
     "2월": []
   },
   "한려해상": {
-    "1월": [
-      {
-        "date": "2026-01-09",
-        "weekday": "금요일",
-        "remaining": 1
-      },
-      {
-        "date": "2026-01-23",
-        "weekday": "금요일",
-        "remaining": 1
-      }
-    ],
+    "1월": [],
     "2월": [
       {
         "date": "2026-02-06",
         "weekday": "금요일",
-        "remaining": 3
+        "remaining": 2
       }
     ]
   }
