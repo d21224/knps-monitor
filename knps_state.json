@@ -51,11 +51,6 @@
         "date": "2026-01-09",
         "weekday": "금요일",
         "remaining": 1
-      },
-      {
-        "date": "2026-01-16",
-        "weekday": "금요일",
-        "remaining": 1
       }
     ],
     "2월": [
@@ -63,11 +58,6 @@
         "date": "2026-02-06",
         "weekday": "금요일",
         "remaining": 4
-      },
-      {
-        "date": "2026-02-13",
-        "weekday": "금요일",
-        "remaining": 1
       }
     ]
   },
