@@ -14,14 +14,14 @@
         "remaining": 4
       },
       {
-        "date": "2026-02-07",
-        "weekday": "토요일",
-        "remaining": 4
-      },
-      {
         "date": "2026-02-13",
         "weekday": "금요일",
         "remaining": 9
+      },
+      {
+        "date": "2026-02-14",
+        "weekday": "토요일",
+        "remaining": 1
       },
       {
         "date": "2026-02-20",
@@ -41,7 +41,7 @@
       {
         "date": "2026-02-13",
         "weekday": "금요일",
-        "remaining": 4
+        "remaining": 3
       }
     ]
   },
