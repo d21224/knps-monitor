@@ -19,23 +19,66 @@
         "remaining": 8
       },
       {
+        "date": "2026-02-14",
+        "weekday": "토요일",
+        "remaining": 1
+      },
+      {
         "date": "2026-02-20",
         "weekday": "금요일",
-        "remaining": 11
+        "remaining": 12
+      },
+      {
+        "date": "2026-02-21",
+        "weekday": "토요일",
+        "remaining": 1
       },
       {
         "date": "2026-02-27",
         "weekday": "금요일",
         "remaining": 1
+      },
+      {
+        "date": "2026-02-28",
+        "weekday": "토요일",
+        "remaining": 3
       }
     ]
   },
   "변산반도": {
-    "1월": [],
-    "2월": []
+    "1월": [
+      {
+        "date": "2026-01-23",
+        "weekday": "금요일",
+        "remaining": 1
+      }
+    ],
+    "2월": [
+      {
+        "date": "2026-02-13",
+        "weekday": "금요일",
+        "remaining": 2
+      }
+    ]
   },
   "한려해상": {
     "1월": [],
-    "2월": []
+    "2월": [
+      {
+        "date": "2026-02-06",
+        "weekday": "금요일",
+        "remaining": 1
+      },
+      {
+        "date": "2026-02-13",
+        "weekday": "금요일",
+        "remaining": 1
+      },
+      {
+        "date": "2026-02-20",
+        "weekday": "금요일",
+        "remaining": 1
+      }
+    ]
   }
 }
