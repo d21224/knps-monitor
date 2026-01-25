@@ -5,6 +5,11 @@
         "date": "2026-01-30",
         "weekday": "금요일",
         "remaining": 4
+      },
+      {
+        "date": "2026-01-31",
+        "weekday": "토요일",
+        "remaining": 1
       }
     ],
     "2월": [
