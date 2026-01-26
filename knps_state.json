@@ -30,7 +30,7 @@
       {
         "date": "2026-01-30",
         "weekday": "금요일",
-        "remaining": 2
+        "remaining": 1
       }
     ],
     "2월": []
@@ -46,11 +46,6 @@
     "2월": [
       {
         "date": "2026-02-13",
-        "weekday": "금요일",
-        "remaining": 1
-      },
-      {
-        "date": "2026-02-20",
         "weekday": "금요일",
         "remaining": 1
       }
