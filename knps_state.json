@@ -7,33 +7,13 @@
         "remaining": 4
       },
       {
-        "date": "2026-02-07",
-        "weekday": "토요일",
-        "remaining": 1
-      },
-      {
         "date": "2026-02-13",
         "weekday": "금요일",
         "remaining": 5
       },
       {
-        "date": "2026-02-14",
-        "weekday": "토요일",
-        "remaining": 1
-      },
-      {
-        "date": "2026-02-20",
-        "weekday": "금요일",
-        "remaining": 1
-      },
-      {
         "date": "2026-02-27",
         "weekday": "금요일",
-        "remaining": 1
-      },
-      {
-        "date": "2026-02-28",
-        "weekday": "토요일",
         "remaining": 1
       }
     ],
@@ -46,7 +26,7 @@
       {
         "date": "2026-03-07",
         "weekday": "토요일",
-        "remaining": 6
+        "remaining": 3
       },
       {
         "date": "2026-03-13",
@@ -56,17 +36,17 @@
       {
         "date": "2026-03-14",
         "weekday": "토요일",
-        "remaining": 4
+        "remaining": 1
       },
       {
         "date": "2026-03-20",
         "weekday": "금요일",
-        "remaining": 6
+        "remaining": 4
       },
       {
         "date": "2026-03-21",
         "weekday": "토요일",
-        "remaining": 10
+        "remaining": 1
       },
       {
         "date": "2026-03-27",
@@ -76,25 +56,15 @@
       {
         "date": "2026-03-28",
         "weekday": "토요일",
-        "remaining": 5
+        "remaining": 1
       }
     ]
   },
   "변산반도": {
     "2월": [
       {
-        "date": "2026-02-13",
-        "weekday": "금요일",
-        "remaining": 2
-      },
-      {
-        "date": "2026-02-14",
+        "date": "2026-02-07",
         "weekday": "토요일",
-        "remaining": 1
-      },
-      {
-        "date": "2026-02-20",
-        "weekday": "금요일",
         "remaining": 1
       }
     ],
@@ -102,82 +72,52 @@
       {
         "date": "2026-03-06",
         "weekday": "금요일",
-        "remaining": 12
-      },
-      {
-        "date": "2026-03-07",
-        "weekday": "토요일",
-        "remaining": 2
+        "remaining": 6
       },
       {
         "date": "2026-03-13",
         "weekday": "금요일",
-        "remaining": 10
-      },
-      {
-        "date": "2026-03-14",
-        "weekday": "토요일",
-        "remaining": 4
+        "remaining": 5
       },
       {
         "date": "2026-03-20",
         "weekday": "금요일",
-        "remaining": 8
-      },
-      {
-        "date": "2026-03-21",
-        "weekday": "토요일",
-        "remaining": 2
+        "remaining": 4
       },
       {
         "date": "2026-03-27",
         "weekday": "금요일",
-        "remaining": 5
+        "remaining": 1
       }
     ]
   },
   "한려해상": {
     "2월": [
       {
-        "date": "2026-02-07",
-        "weekday": "토요일",
+        "date": "2026-02-06",
+        "weekday": "금요일",
         "remaining": 1
       },
       {
         "date": "2026-02-13",
         "weekday": "금요일",
-        "remaining": 2
+        "remaining": 1
       }
     ],
     "3월": [
       {
         "date": "2026-03-06",
         "weekday": "금요일",
-        "remaining": 7
-      },
-      {
-        "date": "2026-03-07",
-        "weekday": "토요일",
-        "remaining": 4
+        "remaining": 6
       },
       {
         "date": "2026-03-13",
         "weekday": "금요일",
-        "remaining": 7
-      },
-      {
-        "date": "2026-03-14",
-        "weekday": "토요일",
-        "remaining": 1
+        "remaining": 6
       },
       {
         "date": "2026-03-20",
         "weekday": "금요일",
-        "remaining": 3
-      },
-      {
-        "date": "2026-03-21",
-        "weekday": "토요일",
         "remaining": 3
       },
       {
