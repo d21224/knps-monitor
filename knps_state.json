@@ -24,6 +24,11 @@
         "remaining": 1
       },
       {
+        "date": "2026-03-14",
+        "weekday": "토요일",
+        "remaining": 1
+      },
+      {
         "date": "2026-03-20",
         "weekday": "금요일",
         "remaining": 3
@@ -43,18 +48,7 @@
         "remaining": 1
       }
     ],
-    "3월": [
-      {
-        "date": "2026-03-13",
-        "weekday": "금요일",
-        "remaining": 1
-      },
-      {
-        "date": "2026-03-20",
-        "weekday": "금요일",
-        "remaining": 1
-      }
-    ]
+    "3월": []
   },
   "한려해상": {
     "2월": [
@@ -62,13 +56,18 @@
         "date": "2026-02-13",
         "weekday": "금요일",
         "remaining": 5
+      },
+      {
+        "date": "2026-02-27",
+        "weekday": "금요일",
+        "remaining": 1
       }
     ],
     "3월": [
       {
         "date": "2026-03-06",
         "weekday": "금요일",
-        "remaining": 6
+        "remaining": 8
       }
     ]
   }
