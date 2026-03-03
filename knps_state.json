@@ -4,10 +4,15 @@
       {
         "date": "2026-03-06",
         "weekday": "금요일",
-        "remaining": 15
+        "remaining": 17
       },
       {
         "date": "2026-03-13",
+        "weekday": "금요일",
+        "remaining": 3
+      },
+      {
+        "date": "2026-03-27",
         "weekday": "금요일",
         "remaining": 3
       }
@@ -15,7 +20,13 @@
     "4월": []
   },
   "변산반도": {
-    "3월": [],
+    "3월": [
+      {
+        "date": "2026-03-06",
+        "weekday": "금요일",
+        "remaining": 4
+      }
+    ],
     "4월": []
   },
   "한려해상": {
@@ -23,7 +34,17 @@
       {
         "date": "2026-03-06",
         "weekday": "금요일",
-        "remaining": 5
+        "remaining": 7
+      },
+      {
+        "date": "2026-03-13",
+        "weekday": "금요일",
+        "remaining": 1
+      },
+      {
+        "date": "2026-03-27",
+        "weekday": "금요일",
+        "remaining": 1
       }
     ],
     "4월": []
