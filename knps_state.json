@@ -32,11 +32,6 @@
         "date": "2026-04-24",
         "weekday": "금요일",
         "remaining": 9
-      },
-      {
-        "date": "2026-04-25",
-        "weekday": "토요일",
-        "remaining": 2
       }
     ]
   },
@@ -62,7 +57,7 @@
       {
         "date": "2026-04-24",
         "weekday": "금요일",
-        "remaining": 2
+        "remaining": 1
       }
     ]
   },
