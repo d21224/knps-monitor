@@ -36,6 +36,11 @@
         "date": "2026-03-06",
         "weekday": "금요일",
         "remaining": 10
+      },
+      {
+        "date": "2026-03-20",
+        "weekday": "금요일",
+        "remaining": 1
       }
     ],
     "4월": []
@@ -57,12 +62,12 @@
       {
         "date": "2026-04-03",
         "weekday": "금요일",
-        "remaining": 7
+        "remaining": 4
       },
       {
         "date": "2026-04-10",
         "weekday": "금요일",
-        "remaining": 3
+        "remaining": 2
       },
       {
         "date": "2026-04-24",
