@@ -7,16 +7,88 @@
         "remaining": 16
       },
       {
+        "date": "2026-03-14",
+        "weekday": "토요일",
+        "remaining": 1
+      },
+      {
         "date": "2026-03-27",
         "weekday": "금요일",
-        "remaining": 3
+        "remaining": 1
       }
     ],
     "4월": [
       {
         "date": "2026-04-10",
         "weekday": "금요일",
+        "remaining": 6
+      },
+      {
+        "date": "2026-04-17",
+        "weekday": "금요일",
+        "remaining": 8
+      },
+      {
+        "date": "2026-04-24",
+        "weekday": "금요일",
+        "remaining": 9
+      },
+      {
+        "date": "2026-04-25",
+        "weekday": "토요일",
+        "remaining": 2
+      }
+    ]
+  },
+  "변산반도": {
+    "3월": [
+      {
+        "date": "2026-03-06",
+        "weekday": "금요일",
+        "remaining": 11
+      },
+      {
+        "date": "2026-03-20",
+        "weekday": "금요일",
+        "remaining": 2
+      }
+    ],
+    "4월": [
+      {
+        "date": "2026-04-03",
+        "weekday": "금요일",
+        "remaining": 2
+      },
+      {
+        "date": "2026-04-24",
+        "weekday": "금요일",
+        "remaining": 2
+      }
+    ]
+  },
+  "한려해상": {
+    "3월": [
+      {
+        "date": "2026-03-06",
+        "weekday": "금요일",
+        "remaining": 9
+      },
+      {
+        "date": "2026-03-13",
+        "weekday": "금요일",
         "remaining": 1
+      }
+    ],
+    "4월": [
+      {
+        "date": "2026-04-03",
+        "weekday": "금요일",
+        "remaining": 7
+      },
+      {
+        "date": "2026-04-10",
+        "weekday": "금요일",
+        "remaining": 3
       },
       {
         "date": "2026-04-17",
@@ -26,33 +98,8 @@
       {
         "date": "2026-04-24",
         "weekday": "금요일",
-        "remaining": 1
-      }
-    ]
-  },
-  "변산반도": {
-    "3월": [
-      {
-        "date": "2026-03-06",
-        "weekday": "금요일",
         "remaining": 2
       }
-    ],
-    "4월": []
-  },
-  "한려해상": {
-    "3월": [
-      {
-        "date": "2026-03-06",
-        "weekday": "금요일",
-        "remaining": 6
-      },
-      {
-        "date": "2026-03-13",
-        "weekday": "금요일",
-        "remaining": 1
-      }
-    ],
-    "4월": []
+    ]
   }
 }
