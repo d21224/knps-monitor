@@ -4,7 +4,7 @@
       {
         "date": "2026-03-13",
         "weekday": "금요일",
-        "remaining": 1
+        "remaining": 3
       },
       {
         "date": "2026-03-27",
@@ -16,7 +16,7 @@
       {
         "date": "2026-04-17",
         "weekday": "금요일",
-        "remaining": 3
+        "remaining": 4
       },
       {
         "date": "2026-04-24",
@@ -35,8 +35,29 @@
         "date": "2026-03-13",
         "weekday": "금요일",
         "remaining": 1
+      },
+      {
+        "date": "2026-03-20",
+        "weekday": "금요일",
+        "remaining": 1
+      },
+      {
+        "date": "2026-03-27",
+        "weekday": "금요일",
+        "remaining": 2
       }
     ],
-    "4월": []
+    "4월": [
+      {
+        "date": "2026-04-17",
+        "weekday": "금요일",
+        "remaining": 1
+      },
+      {
+        "date": "2026-04-24",
+        "weekday": "금요일",
+        "remaining": 2
+      }
+    ]
   }
 }
