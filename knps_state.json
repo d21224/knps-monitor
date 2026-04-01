@@ -2,17 +2,7 @@
   "북한산": {
     "4월": [
       {
-        "date": "2026-04-11",
-        "weekday": "토요일",
-        "remaining": 1
-      },
-      {
         "date": "2026-04-17",
-        "weekday": "금요일",
-        "remaining": 1
-      },
-      {
-        "date": "2026-04-24",
         "weekday": "금요일",
         "remaining": 1
       }
@@ -24,12 +14,7 @@
       {
         "date": "2026-04-03",
         "weekday": "금요일",
-        "remaining": 4
-      },
-      {
-        "date": "2026-04-10",
-        "weekday": "금요일",
-        "remaining": 1
+        "remaining": 2
       }
     ],
     "5월": []
@@ -43,11 +28,6 @@
       },
       {
         "date": "2026-04-10",
-        "weekday": "금요일",
-        "remaining": 1
-      },
-      {
-        "date": "2026-04-24",
         "weekday": "금요일",
         "remaining": 1
       }
