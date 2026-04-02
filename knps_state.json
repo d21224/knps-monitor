@@ -2,6 +2,11 @@
   "북한산": {
     "4월": [
       {
+        "date": "2026-04-17",
+        "weekday": "금요일",
+        "remaining": 1
+      },
+      {
         "date": "2026-04-24",
         "weekday": "금요일",
         "remaining": 1
@@ -13,14 +18,9 @@
     "4월": [],
     "5월": [
       {
-        "date": "2026-05-08",
-        "weekday": "금요일",
-        "remaining": 2
-      },
-      {
         "date": "2026-05-22",
         "weekday": "금요일",
-        "remaining": 3
+        "remaining": 2
       }
     ]
   },
