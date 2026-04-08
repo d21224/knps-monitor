@@ -12,14 +12,14 @@
       {
         "date": "2026-04-10",
         "weekday": "금요일",
-        "remaining": 5
+        "remaining": 4
       }
     ],
     "5월": [
       {
         "date": "2026-05-29",
         "weekday": "금요일",
-        "remaining": 2
+        "remaining": 1
       }
     ]
   }
