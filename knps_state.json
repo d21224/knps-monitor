@@ -23,6 +23,16 @@
     ],
     "5월": [
       {
+        "date": "2026-05-01",
+        "weekday": "금요일",
+        "remaining": 1
+      },
+      {
+        "date": "2026-05-02",
+        "weekday": "토요일",
+        "remaining": 1
+      },
+      {
         "date": "2026-05-08",
         "weekday": "금요일",
         "remaining": 1
