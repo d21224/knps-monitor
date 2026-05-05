@@ -23,11 +23,6 @@
     ],
     "6월": [
       {
-        "date": "2026-06-05",
-        "weekday": "금요일",
-        "remaining": 2
-      },
-      {
         "date": "2026-06-19",
         "weekday": "금요일",
         "remaining": 3
@@ -35,7 +30,7 @@
       {
         "date": "2026-06-26",
         "weekday": "금요일",
-        "remaining": 2
+        "remaining": 1
       }
     ]
   }
