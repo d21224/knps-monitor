@@ -10,16 +10,16 @@
   "한려해상": {
     "5월": [
       {
-        "date": "2026-05-23",
-        "weekday": "토요일",
-        "remaining": 9
+        "date": "2026-05-15",
+        "weekday": "금요일",
+        "remaining": 1
       }
     ],
     "6월": [
       {
         "date": "2026-06-19",
         "weekday": "금요일",
-        "remaining": 3
+        "remaining": 2
       }
     ]
   }
