@@ -12,9 +12,25 @@
       {
         "date": "2026-05-15",
         "weekday": "금요일",
-        "remaining": 2
+        "remaining": 4
+      },
+      {
+        "date": "2026-05-22",
+        "weekday": "금요일",
+        "remaining": 1
+      },
+      {
+        "date": "2026-05-29",
+        "weekday": "금요일",
+        "remaining": 1
       }
     ],
-    "6월": []
+    "6월": [
+      {
+        "date": "2026-06-19",
+        "weekday": "금요일",
+        "remaining": 4
+      }
+    ]
   }
 }
