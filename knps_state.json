@@ -4,7 +4,7 @@
       {
         "date": "2026-06-05",
         "weekday": "금요일",
-        "remaining": 6
+        "remaining": 4
       }
     ],
     "7월": [
@@ -25,23 +25,17 @@
     "7월": []
   },
   "한려해상": {
-    "6월": [
-      {
-        "date": "2026-06-05",
-        "weekday": "금요일",
-        "remaining": 1
-      }
-    ],
+    "6월": [],
     "7월": [
       {
         "date": "2026-07-03",
         "weekday": "금요일",
-        "remaining": 2
+        "remaining": 1
       },
       {
         "date": "2026-07-10",
         "weekday": "금요일",
-        "remaining": 4
+        "remaining": 3
       }
     ]
   }
