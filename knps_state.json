@@ -5,6 +5,11 @@
         "date": "2026-07-03",
         "weekday": "금요일",
         "remaining": 2
+      },
+      {
+        "date": "2026-07-04",
+        "weekday": "토요일",
+        "remaining": 1
       }
     ],
     "8월": []
@@ -14,7 +19,7 @@
       {
         "date": "2026-07-03",
         "weekday": "금요일",
-        "remaining": 1
+        "remaining": 2
       }
     ],
     "8월": []
@@ -25,6 +30,11 @@
         "date": "2026-07-03",
         "weekday": "금요일",
         "remaining": 5
+      },
+      {
+        "date": "2026-07-31",
+        "weekday": "금요일",
+        "remaining": 1
       }
     ],
     "8월": []
