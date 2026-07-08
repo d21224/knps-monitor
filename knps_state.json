@@ -12,15 +12,9 @@
       {
         "date": "2026-07-10",
         "weekday": "금요일",
-        "remaining": 3
+        "remaining": 2
       }
     ],
-    "8월": [
-      {
-        "date": "2026-08-28",
-        "weekday": "금요일",
-        "remaining": 1
-      }
-    ]
+    "8월": []
   }
 }
