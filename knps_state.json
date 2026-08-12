@@ -2,14 +2,9 @@
   "북한산": {
     "8월": [
       {
-        "date": "2026-08-14",
-        "weekday": "금요일",
-        "remaining": 1
-      },
-      {
         "date": "2026-08-21",
         "weekday": "금요일",
-        "remaining": 6
+        "remaining": 5
       }
     ],
     "9월": [
@@ -29,7 +24,7 @@
       {
         "date": "2026-08-14",
         "weekday": "금요일",
-        "remaining": 4
+        "remaining": 2
       }
     ],
     "9월": []
