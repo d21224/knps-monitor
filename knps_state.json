@@ -5,6 +5,11 @@
         "date": "2026-08-21",
         "weekday": "금요일",
         "remaining": 4
+      },
+      {
+        "date": "2026-08-22",
+        "weekday": "토요일",
+        "remaining": 1
       }
     ],
     "9월": []
