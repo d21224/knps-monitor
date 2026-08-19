@@ -4,12 +4,7 @@
       {
         "date": "2026-08-21",
         "weekday": "금요일",
-        "remaining": 4
-      },
-      {
-        "date": "2026-08-22",
-        "weekday": "토요일",
-        "remaining": 1
+        "remaining": 5
       }
     ],
     "9월": [
@@ -38,11 +33,6 @@
         "remaining": 6
       },
       {
-        "date": "2026-08-22",
-        "weekday": "토요일",
-        "remaining": 4
-      },
-      {
         "date": "2026-08-28",
         "weekday": "금요일",
         "remaining": 1
@@ -53,11 +43,6 @@
         "date": "2026-09-11",
         "weekday": "금요일",
         "remaining": 3
-      },
-      {
-        "date": "2026-09-18",
-        "weekday": "금요일",
-        "remaining": 1
       }
     ]
   }
