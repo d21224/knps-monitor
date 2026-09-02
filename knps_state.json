@@ -5,23 +5,17 @@
       {
         "date": "2026-10-02",
         "weekday": "금요일",
-        "remaining": 3
+        "remaining": 1
       },
       {
         "date": "2026-10-16",
         "weekday": "금요일",
-        "remaining": 6
+        "remaining": 5
       }
     ]
   },
   "변산반도": {
-    "9월": [
-      {
-        "date": "2026-09-04",
-        "weekday": "금요일",
-        "remaining": 1
-      }
-    ],
+    "9월": [],
     "10월": []
   },
   "한려해상": {
@@ -29,7 +23,7 @@
       {
         "date": "2026-09-04",
         "weekday": "금요일",
-        "remaining": 2
+        "remaining": 1
       }
     ],
     "10월": [
