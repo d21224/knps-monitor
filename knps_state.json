@@ -5,7 +5,7 @@
       {
         "date": "2026-10-16",
         "weekday": "금요일",
-        "remaining": 3
+        "remaining": 2
       }
     ]
   },
@@ -14,13 +14,7 @@
     "10월": []
   },
   "한려해상": {
-    "9월": [
-      {
-        "date": "2026-09-04",
-        "weekday": "금요일",
-        "remaining": 1
-      }
-    ],
+    "9월": [],
     "10월": [
       {
         "date": "2026-10-16",
@@ -30,12 +24,12 @@
       {
         "date": "2026-10-23",
         "weekday": "금요일",
-        "remaining": 7
+        "remaining": 6
       },
       {
         "date": "2026-10-30",
         "weekday": "금요일",
-        "remaining": 3
+        "remaining": 1
       }
     ]
   }
