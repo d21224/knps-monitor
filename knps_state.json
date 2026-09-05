@@ -17,14 +17,9 @@
     "9월": [],
     "10월": [
       {
-        "date": "2026-10-02",
-        "weekday": "금요일",
-        "remaining": 1
-      },
-      {
         "date": "2026-10-23",
         "weekday": "금요일",
-        "remaining": 8
+        "remaining": 6
       }
     ]
   }
