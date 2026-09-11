@@ -4,7 +4,7 @@
       {
         "date": "2026-09-18",
         "weekday": "금요일",
-        "remaining": 9
+        "remaining": 7
       }
     ],
     "10월": []
@@ -18,15 +18,9 @@
       {
         "date": "2026-09-18",
         "weekday": "금요일",
-        "remaining": 3
+        "remaining": 2
       }
     ],
-    "10월": [
-      {
-        "date": "2026-10-02",
-        "weekday": "금요일",
-        "remaining": 1
-      }
-    ]
+    "10월": []
   }
 }
